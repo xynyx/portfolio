@@ -1,0 +1,148 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+header {
+  // box-sizing: border-box;
+  min-height: 100vh;
+  padding: 310px 0 0vw;
+  position: relative;
+  transform-style: inherit;
+  width: 100vw;
+}
+
+// header h2 {
+//   margin-top: -100px;
+// }
+
+header, header:before {
+  background: 50% 50% / cover;
+}
+
+header::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background-image: url("https://images.unsplash.com/photo-1524169358666-79f22534bc6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80");
+  background-size: cover;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+// header * {
+//   font-weight: normal;
+//   letter-spacing: 0.2em;
+//   text-align: center;
+//   margin: 0;
+//   padding: 1em 0;
+
+// }
+
+.container {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100vh;
+  background: rgb(24, 22, 39);
+  line-height: 30px;
+  font-weight: lighter;
+  padding: 50px;
+  color: grey;
+}
+
+// .name {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   font-family: 'Major Mono Display', monospace;
+// }
+
+
+.text {
+  // top: 50%;
+  // left: 50%;
+  color: #fff;
+  // text-transform: uppercase;
+  font-size: 3em;
+  letter-spacing: 1em;
+  z-index: 3;
+  font-family: 'Major Mono Display', monospace;
+  text-align: center;
+  // padding-left: 2em;
+  // padding-right: 2em
+  // transform: translateX(1.2vw)
+  
+
+}
+
+.text >  h2 {
+  font-family: 'Montserrat', sans-serif; 
+  text-transform: uppercase;
+  // text-align: center;
+  font-weight: normal;
+  font-size: 0.5em;
+  letter-spacing: 0.5em;
+  transform: translateX(-0.6em);
+  padding-top: 1em;
+}
+
+// .text::before, .text::after {
+//   content: attr(data-text);
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   // transform: translateY(32px)
+// }
+
+// .text::before {
+//   color: rgba(255, 0, 76, 0.267);
+//   animation: glitch-effect 3s infinite;
+// }
+// .glitch::after {
+//   color: rgba(0, 38, 255, 0.253);
+//   animation: glitch-effect 2s infinite;
+// }
+
+// @keyframes glitch-effect {
+//   0% {
+//     left: -2px;
+//     top: -2px;
+//   }
+//   25% {
+//     left: 2px;
+//     top: 0px;
+//   }
+//   50% {
+//     left: -1px;
+//     top: 2px;
+//   }
+//   75% {
+//     left: 1px;
+//     top: -1px;
+//   }
+//   100% {
+//     left: 0px;
+//     top: -2px;
+//   }
+// }

@@ -1,5 +1,7 @@
 html {
   height: 100%;
+  width: 100%;
+  min-width: 100%;
   overflow: hidden;
 }
 
@@ -56,18 +58,22 @@ header::before {
 
 // }
 
-.container {
+.container-fluid {
   z-index: 2;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 100vh;
-  background: rgb(24, 22, 39);
+  background: rgb(39, 32, 61);
   line-height: 30px;
   font-weight: lighter;
-  padding: 50px;
+  // padding: 50px;
   color: grey;
+  // transform: translateX(5em)
 }
+
+/*   background: rgb(24, 22, 39);
+ */
 
 // .name {
 //   position: absolute;

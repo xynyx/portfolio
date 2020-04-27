@@ -12,8 +12,8 @@ export default function Navigation() {
   return (
     <Navbar variant="dark" className="navbar" bg="transparent" expand="lg">
       <Navbar.Brand href="https://github.com/xynyx">XYNYX</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
+      {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
+      {/* <Navbar.Collapse id="basic-navbar-nav"> */}
         <Nav className="ml-auto">
           <Nav.Link href="#home">About</Nav.Link>
           <Nav.Link href="#link">pRojects</Nav.Link>
@@ -34,7 +34,7 @@ export default function Navigation() {
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
           <Button variant="outline-success">Search</Button>
         </Form> */}
-      </Navbar.Collapse>
+      {/* </Navbar.Collapse> */}
     </Navbar>
   )
 }

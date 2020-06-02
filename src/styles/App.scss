@@ -1,3 +1,22 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./header.scss";
-@import "./Navbar.scss"
+@import "./Navbar.scss";
+@import "./sections.scss";
+
+html {
+  height: 100%;
+  // width: 100%;
+  // min-width: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

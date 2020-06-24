@@ -1,9 +1,51 @@
+// Size of each hexagon
+$hex-width: 250px;
+$hex-between: 10px;
+
+// Hexagon dimensions
+$hex-height: calc(#{$hex-width} / 1.73);
+$hex-margin: calc(#{$hex-width} / 2);
+$hex-border: calc(#{$hex-margin} / 1.73);
+$hex-transition: all 0.2s ease;
+
+$color-hex-default: #000000;
+// --color-hex-hover:   #FFFFFF;
+// --color-angular:     #DD0031;
+// --color-atom:        #66595C;
+// --color-bootstrap:   #563D7C;
+// --color-circleci:    #343434;
+// --color-css:         #1572B6;
+// --color-git:         #F14E32;
+// --color-gulp:        #DA4648;
+// --color-haskell:     #5D4F85;
+// --color-html:        #E34F26;
+// --color-javascript:  #F7DF1E;
+// --color-meteor:      #DE4F4F;
+// --color-python:      #3776AB;
+// --color-rails:       #CC0000;
+// --color-sass:        #CC6699;
+// --color-vuejs:       #4FC08D;
+// --color-webpack:     #8DD6F9;
+
+.hexagon-container {
+  display: grid;
+  grid-template-columns: $hex-width $hex-width $hex-width $hex-width;
+  grid-auto-rows: calc(#{$hex-width} - 28.87px / 2);
+  grid-gap: $hex-between $hex-between;
+  padding-bottom: $hex-border;
+}
+
 .hexagon {
+  display: flex;
   position: relative;
-  width: 250px; 
-  height: 144.34px;
-  background-color: #64C7CC;
-  margin: 72.17px 0;
+  align-items: center;
+  width: $hex-width;
+  // cursor: pointer;
+  justify-content: center;
+  transition: $hex-transition;
+  height: $hex-height;
+  background-color: #64c7cc;
+  margin: $hex-border 0;
 }
 
 .hexagon:before,
@@ -11,17 +53,26 @@
   content: "";
   position: absolute;
   width: 0;
-  border-left: 125px solid transparent;
-  border-right: 125px solid transparent;
+  left: 0;
+  transition: $hex-transition;
+  border-left: $hex-margin solid transparent;
+  border-right: $hex-margin solid transparent;
 }
 
 .hexagon:before {
   bottom: 100%;
-  border-bottom: 72.17px solid #64C7CC;
+  border-bottom: $hex-border solid #64c7cc;
 }
 
 .hexagon:after {
   top: 100%;
   width: 0;
-  border-top: 72.17px solid #64C7CC;
+  border-top: $hex-border solid #64c7cc;
+}
+
+.hexagon:nth-child(8n + 5),
+.hexagon:nth-child(8n + 6),
+.hexagon:nth-child(8n + 7),
+.hexagon:nth-child(8n + 8) {
+  margin-left: calc(#{$hex-width} / 2 + #{$hex-between} / 2);
 }

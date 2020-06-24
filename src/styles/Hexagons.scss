@@ -29,11 +29,12 @@ $color-hex-default: #000000;
 
 .hexagon-container {
   display: grid;
+  justify-content: center;
+  // Add/remove parameters from here to change how many hexes in each row
   grid-template-columns: $hex-width $hex-width $hex-width $hex-width;
   grid-auto-rows: calc(#{$hex-width} - 32px);
   grid-gap: $hex-between $hex-between;
   padding-bottom: $hex-border;
-  margin: 0 auto;
 }
 
 //FP, Lockr, forex, MTG, suave, interview, tinyapp, tweeter

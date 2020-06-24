@@ -4,32 +4,32 @@ export default function HexagonGrid() {
   return (
     <div className="hexagon-container">
       <div className="hexagon">
-        <div class="hexTop"></div>
-        <div class="hexBottom"></div>
+        <div className="hexTop"></div>
+        <div className="hexBottom"></div>
       </div>
       <div className="hexagon">
-        <div class="hexTop"></div>
-        <div class="hexBottom"></div>
+        <div className="hexTop"></div>
+        <div className="hexBottom"></div>
       </div>
       <div className="hexagon">
-        <div class="hexTop"></div>
-        <div class="hexBottom"></div>
+        <div className="hexTop"></div>
+        <div className="hexBottom"></div>
       </div>
       <div className="hexagon">
-        <div class="hexTop"></div>
-        <div class="hexBottom"></div>
+        <div className="hexTop"></div>
+        <div className="hexBottom"></div>
       </div>
       <div className="hexagon">
-        <div class="hexTop"></div>
-        <div class="hexBottom"></div>
+        <div className="hexTop"></div>
+        <div className="hexBottom"></div>
       </div>
       <div className="hexagon">
-        <div class="hexTop"></div>
-        <div class="hexBottom"></div>
+        <div className="hexTop"></div>
+        <div className="hexBottom"></div>
       </div>
       <div className="hexagon">
-        <div class="hexTop"></div>
-        <div class="hexBottom"></div>
+        <div className="hexTop"></div>
+        <div className="hexBottom"></div>
       </div>
     </div>
   )

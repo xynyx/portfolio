@@ -8,27 +8,26 @@ export default function HexagonGrid() {
         <div class="hexBottom"></div>
       </div>
       <div className="hexagon">
-        {" "}
         <div class="hexTop"></div>
         <div class="hexBottom"></div>
       </div>
       <div className="hexagon">
-        {" "}
         <div class="hexTop"></div>
         <div class="hexBottom"></div>
       </div>
       <div className="hexagon">
-        {" "}
         <div class="hexTop"></div>
         <div class="hexBottom"></div>
       </div>
       <div className="hexagon">
-        {" "}
         <div class="hexTop"></div>
         <div class="hexBottom"></div>
       </div>
       <div className="hexagon">
-        {" "}
+        <div class="hexTop"></div>
+        <div class="hexBottom"></div>
+      </div>
+      <div className="hexagon">
         <div class="hexTop"></div>
         <div class="hexBottom"></div>
       </div>

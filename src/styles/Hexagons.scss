@@ -1,6 +1,6 @@
 // Size of each hexagon
 $hex-width: 250px;
-$hex-between: 10px;
+$hex-between: 30px;
 
 // Hexagon dimensions
 $hex-height: calc(#{$hex-width} / 1.73);
@@ -36,40 +36,127 @@ $color-hex-default: #000000;
 }
 
 .hexagon {
-  display: flex;
+  background-image: url(https://csshexagon.com/img/meow.jpg);
+  background-size: auto 288.6751px;
+  background-position: center;
   position: relative;
-  align-items: center;
   width: $hex-width;
   // cursor: pointer;
-  justify-content: center;
   transition: $hex-transition;
   height: $hex-height;
-  background-color: #64c7cc;
-  margin: $hex-border 0;
+  margin: 72.17px 0;
 }
 
-.hexagon:before,
+// .hexTop,
+// .hexBottom {
+//   position: absolute;
+//   z-index: 1;
+//   width: $hex-width;
+//   height: $hex-height;
+//   overflow: hidden;
+//   -webkit-transform: scaleY(0.5774) rotate(-45deg);
+//   -ms-transform: scaleY(0.5774) rotate(-45deg);
+//   transform: scaleY(0.5774) rotate(-45deg);
+//   background: inherit;
+//   left: 36.61px;
+// }
+// .hexTop:after,
+// .hexBottom:after {
+//   content: "";
+//   position: absolute;
+//   width: $hex-width;
+//   height: $hex-height;
+//   -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-72.1688px);
+//   -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-72.1688px);
+//   transform:          rotate(45deg) scaleY(1.7321) translateY(-72.1688px);
+//   -webkit-transform-origin: 0 0;
+//   -ms-transform-origin: 0 0;
+//   transform-origin: 0 0;
+//   background: inherit;
+// }
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 176.78px;
+  height: 176.78px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 36.61px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: $hex-width;
+  height: $hex-height;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-72.1688px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-72.1688px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-72.1688px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+
+.hexTop {
+  top: -88.3883px;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -88.3883px;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+// .hexagon:before,
+// .hexagon:after {
+//   content: "";
+//   position: absolute;
+//   width: 0;
+//   left: 0;
+//   transition: $hex-transition;
+//   border-left: $hex-margin solid transparent;
+//   border-right: $hex-margin solid transparent;
+// }
+
+// .hexagon:before {
+//   bottom: 100%;
+//   border-bottom: $hex-border solid #64c7cc;
+// }
+
+// .hexagon:after {
+//   top: 0;
+//   left: 0;
+//   width: $hex-width;
+//   height: $hex-height;
+//   z-index: 2;
+//   background: inherit;
+//   border-top: $hex-border solid #64c7cc;
+// }
+
 .hexagon:after {
   content: "";
   position: absolute;
-  width: 0;
+  top: 0.0000px;
   left: 0;
-  transition: $hex-transition;
-  border-left: $hex-margin solid transparent;
-  border-right: $hex-margin solid transparent;
+  width: 250.0000px;
+  height: 144.3376px;
+  z-index: 2;
+  background: inherit;
 }
-
-.hexagon:before {
-  bottom: 100%;
-  border-bottom: $hex-border solid #64c7cc;
-}
-
-.hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: $hex-border solid #64c7cc;
-}
-
 .hexagon:nth-child(8n + 5),
 .hexagon:nth-child(8n + 6),
 .hexagon:nth-child(8n + 7),

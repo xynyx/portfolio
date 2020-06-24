@@ -40,7 +40,6 @@ $color-hex-default: #000000;
 //FP, Lockr, forex, MTG, suave, interview, tinyapp, tweeter
 
 .hexagon {
-
   background-size: auto 346.4102px;
   background-position: center;
   position: relative;
@@ -49,7 +48,7 @@ $color-hex-default: #000000;
   transition: $hex-transition;
   height: $hex-height;
   margin: 86.60px 0;
-  // box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  box-shadow: 0 0 20px rgba(168, 16, 16, 0.6);
 
 
 }
@@ -88,7 +87,7 @@ $color-hex-default: #000000;
   transform: scaleY(0.5774) rotate(-45deg);
   background: inherit;
   left: 43.93px;
-  // box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  box-shadow: 0 0 30px rgba(255, 35, 35, 0.6);
 
 }
 
@@ -134,9 +133,9 @@ $color-hex-default: #000000;
   z-index: 2;
   background: inherit;
 }
-.hexagon:nth-child(8n + 5),
-.hexagon:nth-child(8n + 6),
-.hexagon:nth-child(8n + 7),
-.hexagon:nth-child(8n + 8) {
+.hex-link:nth-child(8n + 6),
+.hex-link:nth-child(8n + 5),
+.hex-link:nth-child(8n + 7),
+.hex-link:nth-child(8n + 8) {
   margin-left: calc(#{$hex-width} / 2 + #{$hex-between} / 2);
 }

@@ -1,14 +1,14 @@
 import React from "react"
-import { Form, Input, InputNumber, Button } from "antd";
-import 'antd/dist/antd.css'
+import { Form, Input, InputNumber, Button } from "antd"
+import { UserOutlined, LockOutlined } from "@ant-design/icons"
 
 const layout = {
   labelCol: {
     span: 8,
   },
-  wrapperCol: {
-    span: 16,
-  },
+  // wrapperCol: {
+  //   span: 8,
+  // },
 }
 const validateMessages = {
   required: "${label} is required!",
@@ -31,6 +31,8 @@ export default function Contact() {
         <p>contAct</p>
 
         <Form
+        style={{margin: "auto"}}
+        className="container-contact"
           {...layout}
           name="nest-messages"
           onFinish={onFinish}
@@ -38,29 +40,27 @@ export default function Contact() {
         >
           <Form.Item
             name={["user", "name"]}
-            label="Name"
             rules={[
               {
                 required: true,
               },
             ]}
           >
-            <Input />
+            <Input placeholder="Name" style={{ backgroundColor: "transparent" }} />
           </Form.Item>
           <Form.Item
             name={["user", "email"]}
-            label="Email"
             rules={[
               {
                 type: "email",
               },
             ]}
           >
-            <Input />
+            <Input placeholder="Email" style={{ backgroundColor: "transparent" }} />
           </Form.Item>
 
-          <Form.Item name={["user", "introduction"]} label="Introduction">
-            <Input.TextArea />
+          <Form.Item name={["user", "introduction"]}>
+            <Input.TextArea style={{ backgroundColor: "transparent" }} />
           </Form.Item>
           <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
             <Button type="primary" htmlType="submit">

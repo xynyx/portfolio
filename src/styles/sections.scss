@@ -12,7 +12,7 @@
   color: grey;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  // align-items: flex-end;
   padding-top: 5em;
   // clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0 100%, 0 20%);
 
@@ -93,4 +93,10 @@
   width: 100%;
   height: 150px;
   background: rgba(81, 78, 119, 0.336);
+}
+
+
+.container-contact {
+  max-width: 500px;
+  // margin: 0 auto;
 }

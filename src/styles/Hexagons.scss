@@ -8,25 +8,6 @@ $hex-margin: calc(#{$hex-width} / 2);
 $hex-border: calc(#{$hex-margin} / 1.73);
 $hex-transition: all 0.2s ease;
 
-$color-hex-default: #000000;
-// --color-hex-hover:   #FFFFFF;
-// --color-angular:     #DD0031;
-// --color-atom:        #66595C;
-// --color-bootstrap:   #563D7C;
-// --color-circleci:    #343434;
-// --color-css:         #1572B6;
-// --color-git:         #F14E32;
-// --color-gulp:        #DA4648;
-// --color-haskell:     #5D4F85;
-// --color-html:        #E34F26;
-// --color-javascript:  #F7DF1E;
-// --color-meteor:      #DE4F4F;
-// --color-python:      #3776AB;
-// --color-rails:       #CC0000;
-// --color-sass:        #CC6699;
-// --color-vuejs:       #4FC08D;
-// --color-webpack:     #8DD6F9;
-
 .hexagon-container {
   display: grid;
   justify-content: center;
@@ -68,6 +49,7 @@ $color-hex-default: #000000;
   font-size: 0.5em;
 }
 
+// TODO - change to nth child (so it isnt name specific for future updates)
 #lockr {
   background-image: url(https://github.com/Team-MTJ/Lockr/raw/master/docs/passwords.png);
 }

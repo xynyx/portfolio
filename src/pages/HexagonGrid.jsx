@@ -13,12 +13,17 @@ export default function HexagonGrid() {
 
   return (
     <div className="hexagon-container">
-      <a 
+      <a
         className="hex-link"
         target="_blank"
         href="https://focuspocus.netlify.app/"
       >
-        <div onMouseEnter={() => handleMouseHover()} onMouseLeave={() => handleMouseHover()} className="hexagon" id="focuspocus">
+        <div
+          onMouseEnter={() => handleMouseHover()}
+          onMouseLeave={() => handleMouseHover()}
+          className="hexagon"
+          id="focuspocus"
+        >
           {hovering && <div className="hexagon-text">FocusPocus</div>}
           <div className="hexTop"></div>
           <div className="hexBottom"></div>

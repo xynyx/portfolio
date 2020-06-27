@@ -20,23 +20,30 @@ function sendEmail(formData, cb) {
       },
       Subject: {
         Charset: "UTF-8",
-        Data: "New message!"
-      }
+        Data: "New message!",
+      },
     },
   }
   // Send the email
-  SES.sendEmail(emailParams, cb);
+  SES.sendEmail(emailParams, cb)
 }
 
 module.exports.mailer = async (event, context, callback) => {
   const formData = JSON.parse(event.body)
 
   sendEmail(formData, (err, data) => {
-    if (err) {
-      console.error(err)
-    } else {
-      console.log(data)
+    const response = {
+      statusCode: err ? 500 : 200,
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "http://localhost:8000/",
+      },
+      body: JSON.stringify({
+        message: err ? err.message : data,
+      }),
     }
+
+    callback(null, response)
   })
 
   // Use this code if you don't use the http event with the LAMBDA-PROXY integration

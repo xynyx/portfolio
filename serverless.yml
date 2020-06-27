@@ -25,9 +25,9 @@ provider:
   runtime: nodejs12.x
   iamRoleStatements:
     - Effect: "Allow"
-    Action:
-      - "ses:SendEmail"
-    Resource: ["*"]
+      Action:
+       - "ses:SendEmail"
+      Resource: ["*"]
 
 # you can overwrite defaults here
 #  stage: dev
@@ -61,6 +61,10 @@ provider:
 #  exclude:
 #    - exclude-me.js
 #    - exclude-me-dir/**
+
+package:
+  exclude:
+    - node_modules/**
 
 functions:
   mailer:

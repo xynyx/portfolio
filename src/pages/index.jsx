@@ -9,6 +9,10 @@ import "antd/dist/antd.css"
 export default () => {
   return (
     <>
+      <link
+        href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat&display=swap"
+        rel="stylesheet"
+      />
       <Navigation />
       <Header />
       <Sections />

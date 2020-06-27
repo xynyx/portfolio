@@ -12,7 +12,7 @@ export default function Sections() {
         <div className="container-inner">
           <About />
           <Projects />
-          <Contact  />
+          <Contact className="" />
         </div>
         <Footer />
       </div>

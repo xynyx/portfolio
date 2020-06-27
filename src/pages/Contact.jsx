@@ -25,6 +25,7 @@ export default function Contact() {
   const onFinish = values => {
     console.log(values)
   }
+  
   return (
     <div>
       <div className="section--projects">
@@ -39,7 +40,7 @@ export default function Contact() {
           validateMessages={validateMessages}
         >
           <Form.Item
-            name={["user", "name"]}
+            name="name"
             rules={[
               {
                 required: true,
@@ -49,7 +50,7 @@ export default function Contact() {
             <Input placeholder="Name" style={{ backgroundColor: "transparent" }} />
           </Form.Item>
           <Form.Item
-            name={["user", "email"]}
+            name="email"
             rules={[
               {
                 type: "email",
@@ -59,10 +60,10 @@ export default function Contact() {
             <Input placeholder="Email" style={{ backgroundColor: "transparent" }} />
           </Form.Item>
 
-          <Form.Item name={["user", "introduction"]}>
+          <Form.Item name="message">
             <Input.TextArea style={{ backgroundColor: "transparent" }} />
           </Form.Item>
-          <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
+          <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 10 }}>
             <Button type="primary" htmlType="submit">
               Submit
             </Button>

@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports.hello = async event => {
+module.exports.mailer = async (event, context, callback) => {
   return {
     statusCode: 200,
     body: JSON.stringify(

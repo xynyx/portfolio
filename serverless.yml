@@ -23,6 +23,11 @@ service: static-site-mailer
 provider:
   name: aws
   runtime: nodejs12.x
+  iamRoleStatements:
+    - Effect: "Allow"
+    Action:
+      - "ses:SendEmail"
+    Resource: ["*"]
 
 # you can overwrite defaults here
 #  stage: dev
@@ -58,8 +63,13 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
-    handler: handler.hello
+  mailer:
+    handler: handler.mailer
+    events:
+      - http:
+          method: post
+          path: static-site-mailer
+          cors: true
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details

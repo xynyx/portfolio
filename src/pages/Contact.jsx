@@ -23,17 +23,19 @@ const validateMessages = {
 
 export default function Contact() {
   const onFinish = values => {
-    console.log(values)
+    console.log(JSON.stringify(values))
   }
-  
+
   return (
     <div>
       <div className="section--projects">
         <p>contAct</p>
 
         <Form
-        style={{margin: "auto"}}
-        className="container-contact"
+          action="{{ SERVICE URL }}"
+          method="POST"
+          style={{ margin: "auto" }}
+          className="container-contact"
           {...layout}
           name="nest-messages"
           onFinish={onFinish}
@@ -47,7 +49,10 @@ export default function Contact() {
               },
             ]}
           >
-            <Input placeholder="Name" style={{ backgroundColor: "transparent" }} />
+            <Input
+              placeholder="Name"
+              style={{ backgroundColor: "transparent" }}
+            />
           </Form.Item>
           <Form.Item
             name="email"
@@ -57,7 +62,10 @@ export default function Contact() {
               },
             ]}
           >
-            <Input placeholder="Email" style={{ backgroundColor: "transparent" }} />
+            <Input
+              placeholder="Email"
+              style={{ backgroundColor: "transparent" }}
+            />
           </Form.Item>
 
           <Form.Item name="message">

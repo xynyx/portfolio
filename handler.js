@@ -1,17 +1,23 @@
 "use strict"
 
+const AWS = require("aws-sdk")
+const SES = new AWS.SES()
+
+function sendEmail(formData, cb) {
+  // Build the SES parameters
+  // Send the email
+}
+
 module.exports.mailer = async (event, context, callback) => {
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify(
-      {
-        message: "Go Serverless v1.0! Your function executed successfully!",
-        input: event,
-      },
-      null,
-      2
-    ),
-  }
+  const formData = JSON.parse(event.body)
+
+  sendEmail(formData, (err, data) => {
+    if (err) {
+      console.error(err)
+    } else {
+      console.log(data)
+    }
+  })
 
   callback(null, response)
 

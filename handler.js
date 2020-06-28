@@ -36,7 +36,7 @@ module.exports.mailer = (event, some, callback) => {
     if (err) {
       console.log(err, err.stack)
     } else {
-      console.log(data)
+      console.log("data", data)
     }
     const response = {
       statusCode: err ? 500 : 200,

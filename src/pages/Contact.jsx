@@ -26,30 +26,13 @@ const validateMessages = {
 
 export default function Contact() {
   const onFinish = values => {
-    console.log(JSON.stringify(values))
-
-    // axios.post(
-    //   "https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer",
-    //   (res, req) => {}
-    // )
-    axios({
-      method: "POST",
-      url:
+    axios
+      .post(
         "https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-      },
-    })
-      .then(res => {
-        console.log("here")
-        console.log(res)
-        res.send(JSON.stringify(values))
-      })
-      .catch(err => console.log("bad", err))
-    // axios.post("https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer", (res, req) => {
-    //   console.log("after")
-    //   res.send(JSON.stringify(values))
+        values
+      )
+      .then(res => console.log(res))
+      .catch(err => console.error)
   }
 
   return (

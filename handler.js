@@ -28,15 +28,15 @@ function sendEmail(formData, cb) {
   SES.sendEmail(emailParams, cb)
 }
 
-module.exports.mailer = async event => {
+module.exports.mailer = (event, some, callback) => {
   console.log("GETS HERE")
   const formData = JSON.parse(event.body)
 
   sendEmail(formData, (err, data) => {
     if (err) {
-      console.log(err, err.stack);
+      console.log(err, err.stack)
     } else {
-      console.log(data);
+      console.log(data)
     }
     const response = {
       statusCode: err ? 500 : 200,
@@ -49,9 +49,8 @@ module.exports.mailer = async event => {
       }),
     }
 
-    return response
-
-    // callback(null, response)
+    // return response
+    callback(null, response)
   })
 
   // Use this code if you don't use the http event with the LAMBDA-PROXY integration

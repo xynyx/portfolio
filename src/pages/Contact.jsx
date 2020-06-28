@@ -32,22 +32,24 @@ export default function Contact() {
     //   "https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer",
     //   (res, req) => {}
     // )
-    // axios({
-    //   method: "POST",
-    //   url:
-    //     "https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     "Accept": "application/json",
-    //   },
-    // }).then(res => {
-    //   console.log("here")
-    //   console.log(res);
-    //   res.send(JSON.stringify(values))
-    // }).catch(err => console.log("bad", err))
+    axios({
+      method: "POST",
+      url:
+        "https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+    })
+      .then(res => {
+        console.log("here")
+        console.log(res)
+        res.send(JSON.stringify(values))
+      })
+      .catch(err => console.log("bad", err))
     // axios.post("https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer", (res, req) => {
+    //   console.log("after")
     //   res.send(JSON.stringify(values))
-    // })
   }
 
   return (

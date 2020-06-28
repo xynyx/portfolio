@@ -1,6 +1,7 @@
 import React from "react"
 import { Form, Input, InputNumber, Button } from "antd"
 import { UserOutlined, LockOutlined } from "@ant-design/icons"
+import axios from "axios"
 
 const layout = {
   labelCol: {
@@ -21,9 +22,32 @@ const validateMessages = {
   },
 }
 
+/* localhost/:1 Access to XMLHttpRequest at 'https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. */
+
 export default function Contact() {
   const onFinish = values => {
     console.log(JSON.stringify(values))
+
+    // axios.post(
+    //   "https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer",
+    //   (res, req) => {}
+    // )
+    // axios({
+    //   method: "POST",
+    //   url:
+    //     "https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     "Accept": "application/json",
+    //   },
+    // }).then(res => {
+    //   console.log("here")
+    //   console.log(res);
+    //   res.send(JSON.stringify(values))
+    // }).catch(err => console.log("bad", err))
+    // axios.post("https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer", (res, req) => {
+    //   res.send(JSON.stringify(values))
+    // })
   }
 
   return (
@@ -32,8 +56,8 @@ export default function Contact() {
         <p>contAct</p>
 
         <Form
-          action="{{ SERVICE URL }}"
-          method="POST"
+          // action="https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer"
+          // method="POST"
           style={{ margin: "auto" }}
           className="container-contact"
           {...layout}

@@ -13,9 +13,12 @@ export default () => {
         href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Montserrat&display=swap"
         rel="stylesheet"
       />
-      <Navigation />
-      <Header />
-      <Sections />
+      <div id="test">
+        <Navigation />
+        <Header />
+        <div className="section--top"></div>
+      </div>
+      <Sections id="sections" />
     </>
   )
 }

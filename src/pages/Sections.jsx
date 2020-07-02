@@ -7,7 +7,7 @@ import Footer from "./Footer"
 export default function Sections() {
   return (
     <>
-      <div className="section--top"></div>
+
       <div className="container-fluid">
         <div className="container-inner">
           <About />

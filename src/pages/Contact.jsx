@@ -22,8 +22,6 @@ const validateMessages = {
   },
 }
 
-/* localhost/:1 Access to XMLHttpRequest at 'https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer' from origin 'http://localhost:8000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. */
-
 export default function Contact() {
   const onFinish = values => {
     axios
@@ -41,8 +39,7 @@ export default function Contact() {
         <p>contAct</p>
 
         <Form
-          // action="https://blnlk54b02.execute-api.us-east-1.amazonaws.com/dev/static-site-mailer"
-          // method="POST"
+          // Inline style required for Ant Design form spacing
           style={{ margin: "auto" }}
           className="container-contact"
           {...layout}

@@ -110,7 +110,7 @@ $shadows-big: multiple-box-shadow(100);
 
 .stars {
   // margin-bottom: 500px;
-  // transform: translateY(-2900px)
+  transform: translateY(-700px)
   // height: 500px;
   // width: 500px;
 }
@@ -119,7 +119,7 @@ $shadows-big: multiple-box-shadow(100);
     transform: translateY(0px);
   }
   to {
-    transform: translateY(-2000px);
+    transform: translateY(-3000px);
   }
 }
 

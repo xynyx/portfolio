@@ -39,7 +39,6 @@ export default function Contact() {
         <p>contAct</p>
 
         <Form
-          // Inline style required for Ant Design form spacing
           style={{ margin: "auto" }}
           className="container-contact"
           {...layout}

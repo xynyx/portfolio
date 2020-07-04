@@ -7,6 +7,7 @@
   // top: 55%;
   // background: rgb(35, 32, 46);
   background: rgb(24, 22, 32);
+  background: #03191d;
   // background: rgb(10, 10, 15);x
   // background: #1b2735;
   // background: rgb(27, 23, 41);
@@ -68,17 +69,14 @@
   font-size: 3em;
   height: 100%;
   margin: 0 auto;
+  margin-bottom: 3em;
   width: 95%;
   // background: rgb(48, 46, 77);
   // border: 2px solid white;
-  p:first-child {
+  p {
     // padding-top: 15em;
     text-align: center;
     font-family: "Major Mono Display", monospace;
-  }
-  p:last-child {
-    font-size: 0.5em;
-    padding: 5em;
   }
 }
 

@@ -28,16 +28,10 @@ function sendEmail(formData, cb) {
   SES.sendEmail(emailParams, cb)
 }
 
-module.exports.mailer = (event, some, callback) => {
-  console.log("GETS HERE")
+module.exports.mailer = (event, context, callback) => {
   const formData = JSON.parse(event.body)
 
   sendEmail(formData, (err, data) => {
-    if (err) {
-      console.log(err, err.stack)
-    } else {
-      console.log("data", data)
-    }
     const response = {
       statusCode: err ? 500 : 200,
       headers: {

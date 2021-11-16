@@ -17,7 +17,7 @@
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "antd": "^4.3.5",
-    "aws-sdk": "^2.706.0",
+    "aws-sdk": "^2.814.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "gatsby": "^2.20.35",
